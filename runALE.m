@@ -18,16 +18,16 @@ cd ale % go to ALE folder
 %% Main and Sub-analyses 01/13/2020
 
 % Input
-ale_inputCoords('data/aberrant_20200113.xls'); % Aberrant
-ale_inputCoords('data/painCoords_20200113.xls'); % Patients (signed)
+ale_inputCoords('aberrant_20200113.xls'); % Aberrant
+ale_inputCoords('painCoords_20200113.xls'); % Patients (signed)
 
 % Compute
-ale_estimateALE('contrasts/pain_20200113.xlsx');
+ale_estimateALE('pain_20200113.xlsx');
 
 %% Subset Perceptual Pain 01/21/2020
 
 % Input
-ale_inputCoords('data/perceptualData_2020-01-21.xls');
+ale_inputCoords('perceptualData_2020-01-21.xls');
 
 % Compute (not Control > Patient because n=8)
-ale_estimateALE('contrasts/perceptual_20200121.xlsx');
+ale_estimateALE('perceptual_20200121.xlsx');
