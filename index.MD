@@ -56,5 +56,3 @@ Once you have the outputted spreadsheet, create three new columns next to the MN
 After you're done editing the spreadsheet, copy and paste the MNI coordinates under the columns `mni_x`, `mni_y`, and `mni_z` into a text editor as well as the three new columns generated. If you use TextEditor in MacOS, enter `command+shift+t` first to make it unformatted text editing. Delete the column header (i.e., the first row that contains the column names `mni_x`, `mni_y`, and `mni_z`), and then save this file as **coordinates.node**.
 
 Open `BrainNet` in MATLAB. Next, choose **BrainNet_ICBM152.nv** as the surface figure and choose **coordinates.node** for Data file (node). Under "Node" in Options, go to "Color" and choose the option "Modular". In "Modular", click "More" and select the color red as Module1 and blue as Module2. Click "OK" and generate the figure.
-
-[**test link**](/docs/test.md)
