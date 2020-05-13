@@ -1,5 +1,9 @@
 # fMRI Chronic Pain Meta-analysis Documentation
 
+Written by Anna Xu | Replicator: Alina Henn
+
+Last Updated: May 12, 2020
+
 ## Setup
 For these analyses, you will need the following software:
 * [MATLAB](https://www.mathworks.com/products/matlab.html)
@@ -10,6 +14,22 @@ For these analyses, you will need the following software:
 To begin, download [**this GitHub repo**](https://github.com/PennBBL/Xu_fMRIChronicPain). Next, move the **spm12** and **BrainNet Viewer** folders into the `dependencies` folder. After you're done with these steps, open the script [**runALE.m**](https://github.com/PennBBL/Xu_fMRIChronicPain/blob/master/runALE.m) on MATLAB. This will be the script to run analyses. In the **ale** folder, create two subdirectories: **DataMatlab** and **DataRaw**. This is where inputted data will be saved later on.
 
 The first line, `curPath=genpath(pwd); addpath(curPath);` will add all dependencies into your main directory. The next line, `cd ale` will put you in the [**ale**](https://github.com/PennLINC/Xu_fMRIChronicPain/tree/master/ale) folder so that you can begin your analyses.
+
+### For Windows OS
+
+Please note that these scripts were ran using Mac OS (Mojave 10.14.1). Prior to running these scripts, if you are using Windows OS, you will need to do the following:
+
+1. Download Visual Studio for C++: https://visualstudio.microsoft.com/vs/features/cplusplus/
+
+2. Download additional documents specific to Windows in the [**Windows_Specific**]() folder. Move these files into your [**ale**] folder.
+
+3. Run the following commands in MATLAB beforehand:
+```
+mex -setup
+mex 'tfceMex.c'
+mex 'tfceMex_pthread.c'
+```
+You are now all set for running the ALE scripts! One other caveat with Windows is you will need a way to unzip **.gz** files. We recommend the program [**WinRAR**](https://www.chip.de/downloads/WinRAR-64-Bit_37666786.html) for this.
 
 ## Conduct Meta-analysis
 
@@ -29,6 +49,8 @@ After, run the line `ale_inputCoords(data/painCoords_20200113.xls)` This reads i
 
 Next, run the line `ale_estimateALE('contrasts/pain_20200113.xlsx');
 ` to run all analyses.  This line reads the spreadsheet [**contrasts/pain_20200113.xlsx**](https://github.com/PennBBL/Xu_fMRIChronicPain/blob/master/contrasts/pain_20200113.xlsx) and runs the contrasts outlined there. ROI-based analyses will also be conducted with this line.
+
+The total runtime on the computer that ran the analyses locally (Macbook Pro 2018) is around 7 hours. That is the typical expected time on newer laptops.
 
 ### Perceptual Ratings Subset
 
