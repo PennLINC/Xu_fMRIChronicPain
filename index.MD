@@ -21,7 +21,7 @@ Please note that these scripts were ran using Mac OS (Mojave 10.14.1). Prior to 
 
 1. Download Visual Studio for C++: https://visualstudio.microsoft.com/vs/features/cplusplus/
 
-2. Download additional documents specific to Windows in the [**Windows_Specific**]() folder. Move these files into your [**ale**] folder.
+2. Download additional documents specific to Windows in the [**Windows_Specific**](https://github.com/PennLINC/Xu_fMRIChronicPain/tree/master/Windows_Specific) folder. Move these files into your [**ale**] folder.
 
 3. Run the following commands in MATLAB beforehand:
 ```
@@ -75,6 +75,6 @@ Surface figures of foci distribution were generated using BrainNet. Before creat
 
 Once you have the outputted spreadsheet, create three new columns next to the MNI coordinates. In the first new column, type `1` for all coordinates that are "patient > control" contrast and type `0` for all coordinates that are "control > patient" contrast (this information is under the header "contrast"). In the second new column, type 1. In the third new column, type `-`.
 
-After you're done editing the spreadsheet, copy and paste the MNI coordinates under the columns `mni_x`, `mni_y`, and `mni_z` into a text editor as well as the three new columns generated. If you use TextEditor in MacOS, enter `command+shift+t` first to make it unformatted text editing. Delete the column header (i.e., the first row that contains the column names `mni_x`, `mni_y`, and `mni_z`), and then save this file as **coordinates.node**.
+After you're done editing the spreadsheet, copy and paste the MNI coordinates under the columns `mni_x`, `mni_y`, and `mni_z` into a text editor as well as the three new columns generated. If you use TextEditor in MacOS, enter `command+shift+t` first to make it unformatted text editing. Delete the column header (i.e., the first row that contains the column names `mni_x`, `mni_y`, and `mni_z`), and then save this file as **coordinates.node**. Please note the coordinates displayed in the paper do not display coordinates for cerebellum.
 
-Open `BrainNet` in MATLAB. Next, choose **BrainNet_ICBM152.nv** as the surface figure and choose **coordinates.node** for Data file (node). Under "Node" in Options, go to "Color" and choose the option "Modular". In "Modular", click "More" and select the color red as Module1 and blue as Module2. Click "OK" and generate the figure.
+Open `BrainNet` in MATLAB. Next, choose **BrainNet_ICBM152.nv** as the surface figure and choose **coordinates.node** for Data file (node). Under "Node" in Options, go to "Color" and choose the option "Modular". In "Modular", click "More" and select the color red as Module1 and blue as Module2. Click "OK" and generate the figure. Please note
